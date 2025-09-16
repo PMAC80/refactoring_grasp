@@ -1,5 +1,7 @@
 #El principio Creator dice: “Una clase debe ser responsable de crear objetos que necesita”.
-
+"""
+2. Creator: Se utiliza una clase (por ejemplo, FabricaCalculadora) con un método estático para crear instancias de Calculadora. Así, la clase que necesita el objeto es responsable de crearlo, siguiendo el principio Creator
+"""
 # Clase Calculadora (sin cambios)
 class Calculadora:
     def __init__(self, a, b):
@@ -38,17 +40,19 @@ if __name__ == "__main__":
 
     calc = FabricaCalculadora.crear_calculadora(num1, num2)  # Creator aplicado
 
-    if operador == '+':
-        resultado = calc.sumar()
-    elif operador == '-':
-        resultado = calc.restar()
-    elif operador == '*':
-        resultado = calc.multiplicar()
-    elif operador == '/':
-        resultado = calc.dividir()
-    else:
-        print("Operador inválido.")
-        resultado = None
+        # Seleccionar operación usando match-case (Python 3.10+)
+    match operador:
+        case '+':
+            resultado = calc.sumar()
+        case '-':
+            resultado = calc.restar()
+        case '*':
+            resultado = calc.multiplicar()
+        case '/':
+            resultado = calc.dividir()
+        case _:
+            print("Operador inválido.")
+            resultado = None
 
     if resultado is not None:
         print("Resultado:", resultado)

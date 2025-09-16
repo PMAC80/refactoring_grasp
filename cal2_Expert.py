@@ -1,5 +1,7 @@
 #El principio Expert dice: “La clase que tiene la información necesaria es la que debe hacerse responsable de la operación”.
-
+"""
+1. Expert: La clase Calculadora es responsable de realizar las operaciones matemáticas porque tiene la información necesaria (los números y los métodos). Esto sigue el principio de asignar la responsabilidad al “experto en información”.
+"""
 # Clase Calculadora (Expert aplicado)
 class Calculadora:
     def __init__(self, a, b):

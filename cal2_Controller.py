@@ -1,4 +1,8 @@
+"""
+3. Controller: Se introduce una clase controladora (por ejemplo, CalculadoraController) que recibe la entrada del usuario y decide qué operación ejecutar, separando la lógica de negocio de la interacción con el usuario y manteniendo bajo acoplamiento y alta cohesión.
+"""
 # Clase Calculadora (sin cambios)
+
 class Calculadora:
     def __init__(self, a, b):
         self.a = a
@@ -27,17 +31,19 @@ class CalculadoraController:
         self.calculadora = calculadora
 
     def ejecutar(self, operador):
-        if operador == '+':
-            return self.calculadora.sumar()
-        elif operador == '-':
-            return self.calculadora.restar()
-        elif operador == '*':
-            return self.calculadora.multiplicar()
-        elif operador == '/':
-            return self.calculadora.dividir()
-        else:
-            print("Operador inválido.")
-            return None
+        # Selección de operación usando match-case (Python 3.10+)
+        match operador:
+            case '+':
+                return self.calculadora.sumar()
+            case '-':
+                return self.calculadora.restar()
+            case '*':
+                return self.calculadora.multiplicar()
+            case '/':
+                return self.calculadora.dividir()
+            case _:
+                print("Operador inválido.")
+                return None
 
 
 # Programa principal (mínimo)
