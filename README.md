@@ -1,6 +1,6 @@
 📘 Algoritmos y Estructuras de Datos II
 
-Este repositorio contiene las prácticas, ejemplos y proyectos realizados en la materia Algoritmos y Estructuras de Datos II, dictada por el profesor José.
+Este repositorio contiene las prácticas, ejemplos y proyectos realizados en la materia Algoritmos y Estructuras de Datos II, dictada por el profesor José Oemig.
 
 📂 Contenido del repositorio
 
@@ -20,7 +20,7 @@ Ejercicios prácticos con resolución en C++ y explicación paso a paso.
 
 🛠️ Tecnologías utilizadas
 
-Lenguaje: C++
+Lenguaje: C++ y Python
 
 IDE/Editor recomendado: Visual Studio Code
 
